@@ -1,0 +1,22 @@
+import java.util.*;
+public class FenceAndCarpet {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Read input dimensions of the ground
+        int length = scanner.nextInt();
+        int breadth = scanner.nextInt();
+        
+        // Calculate perimeter (length of the rope required)
+        int perimeter = 2 * (length + breadth);
+        
+        // Calculate area (quantity of carpet required)
+        int area = length * breadth;
+        
+        // Output results
+        System.out.println(perimeter);
+        System.out.println(area);
+        
+        scanner.close();
+    }
+}
