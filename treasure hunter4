@@ -1,0 +1,28 @@
+import java.util.*;
+public class TreasureDistribution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Read input values
+        int goldCoins = scanner.nextInt();
+        int benPercentage = scanner.nextInt();
+        int blackbeardPercentage = scanner.nextInt();
+        
+        // Calculate Long Ben's share
+        int benShare = (benPercentage * goldCoins) / 100;
+        
+        // Calculate Blackbeard's share after giving Ben's share
+        int remainingCoins = goldCoins - benShare;
+        int blackbeardShare = (blackbeardPercentage * remainingCoins) / 100;
+        
+        // Calculate other pirates' share
+        int otherPiratesShare = (remainingCoins - blackbeardShare) / 3;
+        
+        // Output the shares
+        System.out.println(benShare);
+        System.out.println(blackbeardShare);
+        System.out.println(otherPiratesShare);
+        
+        scanner.close();
+    }
+}
