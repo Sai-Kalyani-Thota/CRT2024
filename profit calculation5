@@ -1,0 +1,28 @@
+import java.util.*;
+public class NewspaperProfit {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Read inputs
+        int x = scanner.nextInt(); // number of copies sold
+        int a = scanner.nextInt(); // cost per copy
+        int b = scanner.nextInt(); // cost to agency per copy
+        
+        // Fixed cost
+        int fixedCost = 100;
+        
+        // Calculate revenue
+        int revenue = x * a;
+        
+        // Calculate total cost
+        int totalCost = x * b + fixedCost;
+        
+        // Calculate profit
+        int profit = revenue - totalCost;
+        
+        // Output the profit
+        System.out.println(profit);
+        
+        scanner.close();
+    }
+}
