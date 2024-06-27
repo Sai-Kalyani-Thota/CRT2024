@@ -1,0 +1,25 @@
+import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Read the float value from user input
+        float n = scanner.nextFloat();
+        
+        // Convert float to integer (lowest round off value)
+        int lowestRoundOff = (int) n;
+        
+        // Calculate ceiling value (highest round off value)
+        double highestRoundOff = Math.ceil(n);
+        
+        // Calculate floor value
+        double floorValue = Math.floor(n);
+        
+        // Print the results
+        System.out.println(lowestRoundOff);
+        System.out.println(String.format("%.1f", highestRoundOff));
+        System.out.println(String.format("%.1f", floorValue));
+        
+        scanner.close();
+    }
+}
