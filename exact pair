@@ -1,0 +1,44 @@
+import java.util.*;
+public class PairWithDifference {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        int T = scanner.nextInt(); // Number of test cases
+        
+        while (T-- > 0) {
+            int L = scanner.nextInt(); // Length of array
+            int N = scanner.nextInt(); // Required difference
+            int[] arr = new int[L];
+            
+            // Read array elements
+            for (int i = 0; i < L; i++) {
+                arr[i] = scanner.nextInt();
+            }
+            
+            // Set to store elements for quick lookup
+            Set<Integer> set = new HashSet<>();
+            boolean found = false;
+            
+            // Iterate through the array
+            for (int i = 0; i < L; i++) {
+                int target1 = arr[i] + N;
+                int target2 = arr[i] - N;
+                
+                if (set.contains(target1) || set.contains(target2)) {
+                    System.out.println(1);
+                    found = true;
+                    break;
+                }
+                
+                // Add current element to the set
+                set.add(arr[i]);
+            }
+            
+            if (!found) {
+                System.out.println(-1);
+            }
+        }
+        
+        scanner.close();
+    }
+}
