@@ -1,0 +1,27 @@
+import java.util.*;
+public class CatAndMouse {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        int q = scanner.nextInt(); // Number of queries
+        
+        for (int i = 0; i < q; i++) {
+            int x = scanner.nextInt(); // Cat A's position
+            int y = scanner.nextInt(); // Cat B's position
+            int z = scanner.nextInt(); // Mouse's position
+            
+            int distance_to_A = Math.abs(x - z);
+            int distance_to_B = Math.abs(y - z);
+            
+            if (distance_to_A < distance_to_B) {
+                System.out.println("Cat A");
+            } else if (distance_to_B < distance_to_A) {
+                System.out.println("Cat B");
+            } else {
+                System.out.println("Mouse C");
+            }
+        }
+        
+        scanner.close();
+    }
+}
