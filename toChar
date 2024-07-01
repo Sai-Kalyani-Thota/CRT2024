@@ -1,0 +1,18 @@
+import java.util.*;
+class toChar{
+    public static void main(String[] args) {
+    String str=new String("Satish software solutions");
+    System.out.println(str);
+    System.out.println(str.replace('S','s'));
+    System.out.println(str.charAt(7));
+    System.out.println(str.indexOf("i"));
+    System.out.println(str.lastIndexOf("i"));
+}
+}
+Satish software solutions
+satish software solutions
+s
+3
+21
+
+=== Code Execution Successful ===
